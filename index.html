@@ -1,1 +1,333 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlitos Campos · Baterísta</title>
+  <meta name="description" content="Baterista cristiano. Clases, sesiones, covers y eventos. Por Él y para Él." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <!-- Open Graph / WhatsApp / redes -->
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://carlitos.qzz.io/" />
+<meta property="og:title"       content="Carlitos Campos · Baterísta" />
+<meta property="og:description" content="Baterista cristiano. Clases, sesiones, covers y eventos. Por Él y para Él." />
+<meta property="og:image"       content="https://carlitos.qzz.io/ProfilePhotoCC.png" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height"content="400" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 380px;
+      background: #f8f9fa;
+      border-radius: 20px;
+      border: 0.5px solid #e2e4e8;
+      overflow: hidden;
+    }
+
+    /* HEADER */
+    .card-header {
+      background: #ffffff;
+      padding: 2rem 1.75rem 1.5rem;
+      border-bottom: 0.5px solid #e8eaed;
+    }
+    .accent-bar {
+      width: 32px;
+      height: 2px;
+      background: #60a5fa;
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #eff6ff;
+      border: 1.5px solid #bfdbfe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .name {
+      font-size: 22px;
+      font-weight: 500;
+      color: #111827;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+    .name span {
+      color: #6b7280;
+      font-weight: 400;
+    }
+    .tagline {
+      font-size: 11px;
+      color: #93c5fd;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .ministry-tag {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #9ca3af;
+      font-style: italic;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 1.25rem 1.75rem;
+      border-bottom: 0.5px solid #e8eaed;
+      background: #ffffff;
+    }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    /* SERVICES */
+    .services-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .services-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #374151;
+    }
+    .services-list li i {
+      font-size: 15px;
+      color: #bfdbfe;
+      flex-shrink: 0;
+    }
+
+    /* CONTACT */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #374151;
+    }
+    .contact-row:hover .contact-label,
+    .contact-row:active .contact-label { color: #3b82f6; }
+    .contact-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      border: 0.5px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 15px;
+      color: #6b7280;
+    }
+    .contact-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .contact-platform {
+      font-size: 10px;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .contact-label {
+      font-size: 13px;
+      color: #374151;
+      transition: color 0.15s;
+    }
+
+    /* BUTTON */
+    .btn-wrap {
+      padding: 1.25rem 1.75rem;
+      background: #ffffff;
+      border-bottom: 0.5px solid #e8eaed;
+    }
+    .add-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px;
+      background: #3b82f6;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em;
+      transition: background 0.18s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .add-btn i { font-size: 16px; }
+    .add-btn:hover { background: #111827; }
+    .add-btn:active { background: #111827; opacity: 0.9; }
+
+    /* FOOTER */
+    .card-footer {
+      padding: 0.85rem 1.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8f9fa;
+    }
+    .dfj-badge {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: #c0c8d4;
+      text-transform: uppercase;
+    }
+    .cross-icon {
+      color: #bfdbfe;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="card-header">
+      <div class="accent-bar"></div>
+      <div class="avatar">DFJ</div>
+      <p class="name">"Carlitos" <span>Drummer</span></p>
+      <p class="tagline">Por Él y para Él</p>
+      <span class="ministry-tag">Drummer For Jesus · DFJ</span>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Servicios</div>
+      <ul class="services-list">
+        <li><i class="ti ti-music" aria-hidden="true"></i> Clases de batería</li>
+        <li><i class="ti ti-microphone" aria-hidden="true"></i> Sesiones de grabación</li>
+        <li><i class="ti ti-headphones" aria-hidden="true"></i> Covers</li>
+        <li><i class="ti ti-calendar-event" aria-hidden="true"></i> Eventos e invitaciones</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Contáctame</div>
+      <div class="contact-list">
+
+        <a class="contact-row" href="https://wa.me/573124818209" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="ti ti-brand-whatsapp" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">WhatsApp</span>
+            <span class="contact-label">Escríbeme</span>
+          </div>
+        </a>
+
+        <a class="contact-row" href="https://instagram.com/carlitosdfj" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="ti ti-brand-instagram" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">Instagram</span>
+            <span class="contact-label">Sígueme</span>
+          </div>
+        </a>
+
+        <a class="contact-row" href="https://tiktok.com/@carlitosdfj" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="ti ti-brand-tiktok" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">TikTok</span>
+            <span class="contact-label">Sígueme</span>
+          </div>
+        </a>
+
+        <a class="contact-row" href="https://www.facebook.com/dfjcarlitos" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="ti ti-brand-facebook" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">Facebook</span>
+            <span class="contact-label">Sígueme</span>
+          </div>
+        </a>
+
+        <a class="contact-row" href="mailto:carlosdrummer0@gmail.com">
+          <div class="contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">Correo</span>
+            <span class="contact-label">E-mail</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="btn-wrap">
+      <button class="add-btn" onclick="downloadVCard()">
+        <i class="ti ti-user-plus" aria-hidden="true"></i>
+        Agregar Contacto
+      </button>
+    </div>
+
+    <div class="card-footer">
+      <span class="dfj-badge">Drummer For Jesus</span>
+      <i class="ti ti-cross cross-icon" aria-hidden="true"></i>
+    </div>
+
+  </div>
+
+  <script>
+    function downloadVCard() {
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:Carlitos Drummer',
+        'NICKNAME:DFJ',
+        'TEL;TYPE=CELL:+573124818209',
+        'EMAIL:carlosdrummer0@gmail.com',
+        'URL:https://instagram.com/carlitosdfj',
+        'NOTE:Drummer For Jesus - Por Él y para Él',
+        'END:VCARD'
+      ].join('\n');
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'carlitos-drummer.vcf';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+
+</body>
+</html>
