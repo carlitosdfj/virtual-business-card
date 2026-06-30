@@ -3,16 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Open Graph / WhatsApp / redes -->
-<meta property="og:type"        content="website" />
-<meta property="og:url"         content="https://carlitos.qzz.io/" />
-<meta property="og:title"       content="Carlitos Campos · Baterísta" />
-<meta property="og:description" content="Baterista cristiano | Sesionista | Drum teacher | Live & Studio Drummer" />
-<meta property="og:image"       content="https://carlitos.qzz.io/ProfilePhotoDFJ.jpg" />
-<meta property="og:image:width" content="400" />
-<meta property="og:image:height"content="400" />
-  <title>Carlitos · Baterísta</title>
-  <meta name="description" content="Baterista cristiano | Sesionista | Drum teacher | Live & Studio Drummer" />
+  <title>Carlitos · Drummer For Jesus</title>
+  <meta name="description" content="Baterista cristiano. Clases, sesiones, covers y eventos. Por Él y para Él." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -65,12 +57,9 @@
       letter-spacing: 0.05em;
       transition: all 0.18s;
     }
-    .lang-btn.active {
-      background: #2563eb;
-      color: #fff;
-    }
+    .lang-btn.active { background: #2563eb; color: #fff; }
 
-    /* HERO FOTO */
+    /* HERO */
     .hero {
       position: relative;
       width: 100%;
@@ -96,31 +85,18 @@
       flex-direction: column;
       gap: 10px;
     }
-    .hero-placeholder i {
-      font-size: 64px;
-      color: #1e3a5f;
-    }
-    .hero-placeholder span {
-      font-size: 12px;
-      color: #1e3a5f;
-      letter-spacing: 0.1em;
-    }
-    /* Degradé inferior sobre la foto */
+    .hero-placeholder i { font-size: 64px; color: #1e3a5f; }
+    .hero-placeholder span { font-size: 12px; color: #1e3a5f; letter-spacing: 0.1em; }
     .hero-overlay {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       height: 75%;
       background: linear-gradient(to bottom, transparent 0%, rgba(8,14,26,0.7) 50%, #080e1a 100%);
       pointer-events: none;
     }
-    /* Texto encima de la foto */
     .hero-text {
       position: absolute;
-      bottom: 28px;
-      left: 24px;
-      right: 24px;
+      bottom: 28px; left: 24px; right: 24px;
       z-index: 2;
     }
     .hero-name {
@@ -151,11 +127,8 @@
     }
 
     /* BODY */
-    .card-body {
-      background: #0d1520;
-    }
+    .card-body { background: #0d1520; }
 
-    /* ABOUT */
     .about-section {
       padding: 1.5rem 1.75rem 1.25rem;
       border-bottom: 0.5px solid #1a2a40;
@@ -187,88 +160,57 @@
       margin-bottom: 10px;
     }
 
-    /* SERVICES */
-    .services-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-    .services-list li {
+    /* SERVICES — clickeables */
+    .services-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .service-item {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 10px;
       font-size: 13px;
       color: #7a94b0;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      -webkit-tap-highlight-color: transparent;
     }
-    .services-list li i {
-      font-size: 15px;
-      color: #2563eb;
-      flex-shrink: 0;
-    }
+    .service-item:hover { background: #112240; color: #93c5fd; }
+    .service-item:active { background: #112240; color: #93c5fd; }
+    .service-left { display: flex; align-items: center; gap: 10px; }
+    .service-item i.ti-chevron-right { font-size: 13px; color: #2563eb; opacity: 0.6; }
+    .service-item i:first-child { font-size: 15px; color: #2563eb; flex-shrink: 0; }
 
     /* CONTACT */
-    .contact-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    .contact-list { display: flex; flex-direction: column; gap: 10px; }
     .contact-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: flex; align-items: center; gap: 10px;
       text-decoration: none;
     }
     .contact-row:hover .contact-label,
     .contact-row:active .contact-label { color: #60a5fa; }
     .contact-icon {
-      width: 32px;
-      height: 32px;
+      width: 32px; height: 32px;
       border-radius: 9px;
       background: #112240;
       border: 0.5px solid #1e3a5f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 16px;
-      color: #3b82f6;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 16px; color: #3b82f6;
     }
     .contact-meta { display: flex; flex-direction: column; gap: 1px; }
-    .contact-platform {
-      font-size: 10px;
-      color: #2d4a6a;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .contact-label {
-      font-size: 13px;
-      color: #7a94b0;
-      transition: color 0.15s;
-    }
+    .contact-platform { font-size: 10px; color: #2d4a6a; text-transform: uppercase; letter-spacing: 0.08em; }
+    .contact-label { font-size: 13px; color: #7a94b0; transition: color 0.15s; }
 
     /* BUTTON */
-    .btn-wrap {
-      padding: 1.1rem 1.75rem;
-      border-bottom: 0.5px solid #1a2a40;
-    }
+    .btn-wrap { padding: 1.1rem 1.75rem; border-bottom: 0.5px solid #1a2a40; }
     .add-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 12px;
-      background: #2563eb;
-      color: #ffffff;
-      border: none;
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 0.02em;
-      transition: background 0.18s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 12px;
+      background: #2563eb; color: #ffffff;
+      border: none; border-radius: 12px;
+      font-size: 13px; font-weight: 500;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      letter-spacing: 0.02em; transition: background 0.18s;
       -webkit-tap-highlight-color: transparent;
     }
     .add-btn i { font-size: 16px; }
@@ -278,23 +220,124 @@
     /* FOOTER */
     .card-footer {
       padding: 0.75rem 1.75rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    .dfj-badge {
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      color: #1a2a40;
-      text-transform: uppercase;
-    }
+    .dfj-badge { font-size: 10px; letter-spacing: 0.12em; color: #1a2a40; text-transform: uppercase; }
     .cross-icon { color: #1a2a40; font-size: 14px; }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 100;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0;
+    }
+    .modal-backdrop.open { display: flex; }
+
+    .modal {
+      background: #0d1520;
+      border: 0.5px solid #1a2a40;
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-width: 480px;
+      padding: 1.5rem 1.75rem 2rem;
+      max-height: 92vh;
+      overflow-y: auto;
+      animation: slideUp 0.25s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to   { transform: translateY(0);   opacity: 1; }
+    }
+
+    .modal-handle {
+      width: 36px; height: 4px;
+      background: #1e3a5f;
+      border-radius: 2px;
+      margin: 0 auto 1.25rem;
+    }
+    .modal-title {
+      font-size: 16px; font-weight: 700;
+      color: #f0f6ff;
+      margin-bottom: 4px;
+    }
+    .modal-sub {
+      font-size: 12px; color: #4b6a8f;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group { margin-bottom: 1rem; }
+    .form-label {
+      display: block;
+      font-size: 11px; font-weight: 500;
+      color: #4b6a8f;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #112240;
+      border: 0.5px solid #1e3a5f;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.15s;
+      appearance: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: #2563eb;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: #2d4a6a; }
+    .form-select option { background: #0d1520; color: #e2e8f0; }
+    .form-textarea { resize: none; height: 90px; }
+
+    .form-submit {
+      width: 100%; padding: 12px;
+      background: #2563eb; color: #fff;
+      border: none; border-radius: 12px;
+      font-size: 13px; font-weight: 500;
+      cursor: pointer; font-family: 'Inter', sans-serif;
+      transition: background 0.18s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: #1d4ed8; }
+    .form-submit:disabled { background: #1e3a5f; color: #4b6a8f; cursor: not-allowed; }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    .form-success i { font-size: 40px; color: #22c55e; margin-bottom: 10px; }
+    .form-success p { font-size: 14px; color: #7a94b0; line-height: 1.6; }
+    .form-success strong { color: #f0f6ff; }
+
+    .modal-close-btn {
+      width: 100%; padding: 10px;
+      background: transparent;
+      border: 0.5px solid #1e3a5f;
+      border-radius: 12px;
+      color: #4b6a8f;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      margin-top: 0.75rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .modal-close-btn:hover { border-color: #2563eb; color: #7a94b0; }
   </style>
 </head>
 <body>
 <div class="card">
 
-  <!-- Lang toggle -->
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('es')" id="btn-es">ES</button>
     <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
@@ -302,7 +345,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <img class="hero-img" src="ProfilePhotoDFJ.jpg" alt="Carlitos Drummer"
+    <img class="hero-img" src="foto.jpg" alt="Carlitos Drummer"
       onerror="this.style.display='none'; document.querySelector('.hero-placeholder').style.display='flex';" />
     <div class="hero-placeholder" style="display:none;">
       <i class="ti ti-user" aria-hidden="true"></i>
@@ -310,9 +353,9 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-text">
-      <p class="hero-name">"Carlitos"<span>Campos</span></p>
-      <p class="hero-role" data-es="Baterista" data-en="Drummer">Baterista</p>
-      <p class="hero-ministry" data-es="Baterista cristiano - Sesionista - Clases de Batería - En Vivo & Estudio" data-en="Christian Drummer - Sessionist - Drum teacher - Live & Studio Drummer">Drummer For Jesus</p>
+      <p class="hero-name">"Carlitos"<span>Drummer</span></p>
+      <p class="hero-role" data-es="Baterista · DFJ" data-en="Drummer · DFJ">Baterista · DFJ</p>
+      <p class="hero-ministry">Drummer For Jesus</p>
     </div>
   </div>
 
@@ -332,17 +375,33 @@
     <div class="section">
       <div class="section-label" data-es="Servicios" data-en="Services">Servicios</div>
       <ul class="services-list">
-        <li><i class="ti ti-music" aria-hidden="true"></i>
-          <span data-es="Clases de batería" data-en="Drum lessons">Clases de batería</span>
+        <li class="service-item" onclick="openModal('clase')">
+          <span class="service-left">
+            <i class="ti ti-music" aria-hidden="true"></i>
+            <span data-es="Clases de batería" data-en="Drum lessons">Clases de batería</span>
+          </span>
+          <i class="ti ti-chevron-right" aria-hidden="true"></i>
         </li>
-        <li><i class="ti ti-microphone" aria-hidden="true"></i>
-          <span data-es="Sesiones de grabación" data-en="Recording sessions">Sesiones de grabación</span>
+        <li class="service-item" onclick="openModal('sesion')">
+          <span class="service-left">
+            <i class="ti ti-microphone" aria-hidden="true"></i>
+            <span data-es="Sesiones de grabación" data-en="Recording sessions">Sesiones de grabación</span>
+          </span>
+          <i class="ti ti-chevron-right" aria-hidden="true"></i>
         </li>
-        <li><i class="ti ti-headphones" aria-hidden="true"></i>
-          <span data-es="Covers" data-en="Covers">Covers</span>
+        <li class="service-item" onclick="openModal('cover')">
+          <span class="service-left">
+            <i class="ti ti-headphones" aria-hidden="true"></i>
+            <span data-es="Covers" data-en="Covers">Covers</span>
+          </span>
+          <i class="ti ti-chevron-right" aria-hidden="true"></i>
         </li>
-        <li><i class="ti ti-calendar-event" aria-hidden="true"></i>
-          <span data-es="Eventos e invitaciones" data-en="Events & bookings">Eventos e invitaciones</span>
+        <li class="service-item" onclick="openCalendar()">
+          <span class="service-left">
+            <i class="ti ti-calendar-event" aria-hidden="true"></i>
+            <span data-es="Eventos e invitaciones" data-en="Events & bookings">Eventos e invitaciones</span>
+          </span>
+          <i class="ti ti-external-link" style="font-size:13px;color:#2563eb;opacity:0.6;" aria-hidden="true"></i>
         </li>
       </ul>
     </div>
@@ -368,6 +427,14 @@
           </div>
         </a>
 
+        <a class="contact-row" href="https://tiktok.com/@carlitosdfj" target="_blank" rel="noopener">
+          <div class="contact-icon"><i class="ti ti-brand-tiktok" aria-hidden="true"></i></div>
+          <div class="contact-meta">
+            <span class="contact-platform">TikTok</span>
+            <span class="contact-label" data-es="Sígueme" data-en="Follow me">Sígueme</span>
+          </div>
+        </a>
+
         <a class="contact-row" href="https://www.facebook.com/dfjcarlitos" target="_blank" rel="noopener">
           <div class="contact-icon"><i class="ti ti-brand-facebook" aria-hidden="true"></i></div>
           <div class="contact-meta">
@@ -380,15 +447,7 @@
           <div class="contact-icon"><i class="ti ti-brand-youtube" aria-hidden="true"></i></div>
           <div class="contact-meta">
             <span class="contact-platform">YouTube</span>
-            <span class="contact-label" data-es="Suscríbete" data-en="Suscribe">Suscríbete</span>
-          </div>
-        </a>
-
-        <a class="contact-row" href="https://tiktok.com/@carlitosdfj" target="_blank" rel="noopener">
-          <div class="contact-icon"><i class="ti ti-brand-tiktok" aria-hidden="true"></i></div>
-          <div class="contact-meta">
-            <span class="contact-platform">TikTok</span>
-            <span class="contact-label" data-es="Sígueme" data-en="Follow me">Sígueme</span>
+            <span class="contact-label" data-es="Suscríbete" data-en="Subscribe">Suscríbete</span>
           </div>
         </a>
 
@@ -419,22 +478,185 @@
   </div>
 </div>
 
+<!-- ── MODAL ── -->
+<div class="modal-backdrop" id="modal-backdrop" onclick="handleBackdropClick(event)">
+  <div class="modal" id="modal">
+    <div class="modal-handle"></div>
+    <p class="modal-title" id="modal-title">Solicitar servicio</p>
+    <p class="modal-sub" id="modal-sub">Completa el formulario y te contacto pronto.</p>
+
+    <div id="form-wrap">
+      <form id="contact-form" action="https://formspree.io/f/mwvdnjry" method="POST">
+
+        <input type="hidden" name="servicio" id="field-servicio" value="" />
+
+        <div class="form-group">
+          <label class="form-label" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
+          <input class="form-input" type="text" name="nombre" placeholder="¿Cómo te llamas?" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-es="Tu correo" data-en="Your email">Tu correo</label>
+          <input class="form-input" type="email" name="email" placeholder="correo@ejemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-es="Tu WhatsApp (opcional)" data-en="Your WhatsApp (optional)">Tu WhatsApp (opcional)</label>
+          <input class="form-input" type="tel" name="whatsapp" placeholder="+57 300 000 0000" />
+        </div>
+
+        <div class="form-group" id="service-selector-wrap">
+          <label class="form-label" data-es="Servicio de interés" data-en="Service of interest">Servicio de interés</label>
+          <select class="form-select" name="servicio_elegido" id="service-select">
+            <option value="" disabled selected data-es="Selecciona una opción" data-en="Select an option">Selecciona una opción</option>
+            <option value="Clase de batería" data-es="Clase de batería" data-en="Drum lesson">Clase de batería</option>
+            <option value="Sesión de grabación" data-es="Sesión de grabación" data-en="Recording session">Sesión de grabación</option>
+            <option value="Cover" data-es="Cover" data-en="Cover">Cover</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-es="Cuéntame más" data-en="Tell me more">Cuéntame más</label>
+          <textarea class="form-textarea" name="mensaje" id="field-mensaje" placeholder="¿Qué tienes en mente?"></textarea>
+        </div>
+
+        <button class="form-submit" type="submit" id="submit-btn">
+          <span data-es="Enviar solicitud" data-en="Send request">Enviar solicitud</span>
+        </button>
+        <button type="button" class="modal-close-btn" onclick="closeModal()">
+          <span data-es="Cancelar" data-en="Cancel">Cancelar</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <i class="ti ti-circle-check" aria-hidden="true"></i>
+      <p><strong data-es="¡Listo!" data-en="Done!">¡Listo!</strong><br>
+        <span data-es="Recibí tu mensaje. Te contacto pronto." data-en="Got your message. I'll be in touch soon.">Recibí tu mensaje. Te contacto pronto.</span>
+      </p>
+      <button type="button" class="modal-close-btn" style="margin-top:1rem;" onclick="closeModal()">
+        <span data-es="Cerrar" data-en="Close">Cerrar</span>
+      </button>
+    </div>
+
+  </div>
+</div>
+
 <script>
+  const i18n = {
+    es: {
+      clase:  { title: 'Clases de batería',    sub: 'Cuéntame tu nivel y disponibilidad.' },
+      sesion: { title: 'Sesión de grabación',  sub: 'Cuéntame sobre tu proyecto y lo coordinamos.' },
+      cover:  { title: 'Cover',                sub: 'Dime la canción y el contexto — encontramos la forma.' },
+    },
+    en: {
+      clase:  { title: 'Drum lessons',         sub: 'Tell me your level and availability.' },
+      sesion: { title: 'Recording session',    sub: 'Tell me about your project and we\'ll coordinate.' },
+      cover:  { title: 'Cover',                sub: 'Tell me the song and context — we\'ll make it work.' },
+    }
+  };
+
+  const serviceValues = {
+    es: { clase: 'Clase de batería', sesion: 'Sesión de grabación', cover: 'Cover' },
+    en: { clase: 'Drum lesson',      sesion: 'Recording session',   cover: 'Cover' }
+  };
+
+  let currentLang = 'es';
+  let currentService = null;
+
+  function openModal(service) {
+    currentService = service;
+    const data = i18n[currentLang][service];
+    document.getElementById('modal-title').textContent = data.title;
+    document.getElementById('modal-sub').textContent = data.sub;
+    document.getElementById('field-servicio').value = serviceValues[currentLang][service];
+
+    // Pre-seleccionar en el select
+    const sel = document.getElementById('service-select');
+    const val = serviceValues['es'][service]; // siempre en español para Formspree
+    for (let o of sel.options) { if (o.value === val) { o.selected = true; break; } }
+
+    // Placeholder textarea
+    const placeholders = {
+      es: { clase: '¿Eres principiante o tienes experiencia? ¿Qué días te quedan bien?', sesion: '¿Qué canción o proyecto tienes en mente?', cover: '¿Qué canción o artista tienes en mente?' },
+      en: { clase: 'Are you a beginner or do you have experience? What days work for you?', sesion: 'What song or project do you have in mind?', cover: 'What song or artist do you have in mind?' }
+    };
+    document.getElementById('field-mensaje').placeholder = placeholders[currentLang][service];
+
+    document.getElementById('form-success').style.display = 'none';
+    document.getElementById('form-wrap').style.display = 'block';
+    document.getElementById('contact-form').reset();
+
+    document.getElementById('modal-backdrop').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal-backdrop').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleBackdropClick(e) {
+    if (e.target === document.getElementById('modal-backdrop')) closeModal();
+  }
+
+  function openCalendar() {
+    // Reemplaza esta URL con tu link de Google Booking cuando lo tengas
+    window.open('https://calendar.google.com/calendar/appointments', '_blank');
+  }
+
+  // Formspree AJAX
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+    try {
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('form-wrap').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        alert(currentLang === 'es' ? 'Hubo un error. Intenta de nuevo.' : 'Something went wrong. Please try again.');
+        btn.disabled = false;
+        btn.querySelector('span').textContent = currentLang === 'es' ? 'Enviar solicitud' : 'Send request';
+      }
+    } catch {
+      alert(currentLang === 'es' ? 'Sin conexión. Intenta de nuevo.' : 'No connection. Please try again.');
+      btn.disabled = false;
+      btn.querySelector('span').textContent = currentLang === 'es' ? 'Enviar solicitud' : 'Send request';
+    }
+  });
+
   function setLang(lang) {
+    currentLang = lang;
     document.querySelectorAll('[data-es]').forEach(el => {
       el.textContent = el.getAttribute('data-' + lang);
     });
     document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.documentElement.lang = lang;
+    // Actualizar opciones del select
+    document.querySelectorAll('.form-select option[data-es]').forEach(o => {
+      o.textContent = o.getAttribute('data-' + lang);
+    });
   }
+
+  // Auto-detectar idioma
+  const browserLang = navigator.language || navigator.userLanguage;
+  if (browserLang && !browserLang.startsWith('es')) setLang('en');
+
+  // Cerrar modal con ESC
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
   function downloadVCard() {
     const vcard = [
-      'BEGIN:VCARD',
-      'VERSION:3.0',
-      'FN:Carlitos Drummer',
-      'NICKNAME:DFJ',
+      'BEGIN:VCARD', 'VERSION:3.0',
+      'FN:Carlitos Drummer', 'NICKNAME:DFJ',
       'TEL;TYPE=CELL:+573124818209',
       'EMAIL:carlosdrummer0@gmail.com',
       'URL:https://instagram.com/carlitosdfj',
@@ -444,18 +666,9 @@
     const blob = new Blob([vcard], { type: 'text/vcard' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = 'carlitos-drummer.vcf';
-    a.click();
+    a.href = url; a.download = 'carlitos-drummer.vcf'; a.click();
     URL.revokeObjectURL(url);
   }
-
-  // Auto-detectar idioma del navegador
-  const browserLang = navigator.language || navigator.userLanguage;
-  if (browserLang && !browserLang.startsWith('es')) {
-    setLang('en');
-  }
 </script>
-
 </body>
 </html>
