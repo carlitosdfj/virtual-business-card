@@ -403,7 +403,7 @@
         <li class="service-item" onclick="openModal('cover')">
           <span class="service-left">
             <i class="ti ti-headphones" aria-hidden="true"></i>
-            <span data-es="Covers" data-en="Covers">Covers</span>
+            <span data-es="Participación musical" data-en="Guest Performance">Participación musical</span>
           </span>
           <i class="ti ti-chevron-right" aria-hidden="true"></i>
         </li>
@@ -505,12 +505,12 @@
           <label class="form-label" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
           <input class="form-input" type="text" name="nombre" placeholder="¿Cómo te llamas?" required />
         </div>
-
+        <!-- mail form option 
         <div class="form-group">
           <label class="form-label" data-es="Tu correo" data-en="Your email">Tu correo</label>
           <input class="form-input" type="email" name="email" placeholder="correo@ejemplo.com" required />
         </div>
-
+                -->
         <div class="form-group">
           <label class="form-label" data-es="Tu WhatsApp (opcional)" data-en="Your WhatsApp (optional)">Tu WhatsApp (opcional)</label>
           <input class="form-input" type="tel" name="whatsapp" placeholder="+57 300 000 0000" />
@@ -522,7 +522,7 @@
             <option value="" disabled selected data-es="Selecciona una opción" data-en="Select an option">Selecciona una opción</option>
             <option value="Clase de batería" data-es="Clase de batería" data-en="Drum lesson">Clase de batería</option>
             <option value="Sesión de grabación" data-es="Sesión de grabación" data-en="Recording session">Sesión de grabación</option>
-            <option value="Cover" data-es="Cover" data-en="Cover">Cover</option>
+            <option value="Participación musical" data-es="Participación musical" data-en="Guest Performance">Cover</option>
           </select>
         </div>
 
@@ -533,9 +533,6 @@
 
         <button class="form-submit" type="submit" id="submit-btn">
           <span data-es="Enviar solicitud" data-en="Send request">Enviar solicitud</span>
-        </button>
-        <button type="button" class="modal-close-btn" onclick="closeModal()">
-          <span data-es="Cancelar" data-en="Cancel">Cancelar</span>
         </button>
       </form>
     </div>
@@ -558,12 +555,12 @@
     es: {
       clase:  { title: 'Clases de batería',    sub: 'Cuéntame tu nivel y disponibilidad.' },
       sesion: { title: 'Sesión de grabación',  sub: 'Cuéntame sobre tu proyecto y lo coordinamos.' },
-      cover:  { title: 'Cover',                sub: 'Dime la canción y el contexto — encontramos la forma.' },
+      cover:  { title: 'Participación musical',sub: 'Si tienes una idea musical en la que pueda aportar, conversemos.' },
     },
     en: {
       clase:  { title: 'Drum lessons',         sub: 'Tell me your level and availability.' },
       sesion: { title: 'Recording session',    sub: 'Tell me about your project and we\'ll coordinate.' },
-      cover:  { title: 'Cover',                sub: 'Tell me the song and context — we\'ll make it work.' },
+      cover:  { title: 'Guest Performance',    sub: 'If you have a musical idea where I can contribute, let’s talk about it.' },
     }
   };
 
