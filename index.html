@@ -399,7 +399,9 @@
 
         <div class="form-group">
           <label class="form-label" data-es="Tu nombre" data-en="Your name">Tu nombre</label>
-          <input class="form-input" type="text" name="nombre" placeholder="¿Cómo te llamas?" required />
+          <input class="form-input" type="text" name="nombre" id="field-nombre"
+            data-placeholder-es="¿Cómo te llamas?" data-placeholder-en="What's your name?"
+            placeholder="¿Cómo te llamas?" required />
         </div>
 
         <div class="form-group">
@@ -573,6 +575,10 @@
     if (currentService) {
       document.getElementById('field-mensaje').placeholder = placeholders[lang][currentService] || placeholders[lang].default;
     }
+    // Actualizar placeholders con data-placeholder-es/en
+    document.querySelectorAll('[data-placeholder-es]').forEach(el => {
+      el.placeholder = el.getAttribute('data-placeholder-' + lang);
+    });
   }
 
   const browserLang = navigator.language || navigator.userLanguage;
